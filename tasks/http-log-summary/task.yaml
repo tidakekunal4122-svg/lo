@@ -1,0 +1,14 @@
+instruction: |
+  You are in /app where an HTTP access log is available at data/access.log.
+  Generate two summary files using Bash or common POSIX utilities:
+  1. reports/method_counts.txt listing each HTTP method and the number of requests for that method.
+     Sort this file alphabetically by method name. Use the format "METHOD COUNT" (space separated).
+  2. reports/status_counts.txt listing each HTTP status code and how many times it appears.
+     Sort this file by descending count; break ties by ascending status code. Use the format "STATUS COUNT".
+  Create the reports directory if it does not exist. Do not alter the source log file.
+author_email: candidate@example.com
+difficulty: medium
+tags: [logs, bash, awk]
+max_agent_timeout_sec: 180
+max_test_timeout_sec: 30
+workdir: /app
